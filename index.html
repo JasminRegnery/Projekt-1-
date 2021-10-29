@@ -1,0 +1,231 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Infoteam GmbH - Home</title>
+
+<style type="text/css">
+
+ /*Außen- und Innenabstände auf 0 setzen*/
+	body {
+   		background-color: #96f120;
+		background-image: url(Bilder/hg_Vorgabe.jpg) repeat-y;
+		line-height: 1.3;
+   		font-family: sans-serif;	/*Schriftart*/
+    	font-size: 100%;			/*Schriftgröße*/
+}
+	 
+/*Zentrierte Ausrichtung, Breite, abgerundete Ecken und Schatten*/
+	#Gesamt {
+	  overflow:hidden; /*Verhindert, dass ein DIV-Container einen anderen DIV-Container verdeckt.*/
+      background: #ccf696;	/*Hintergrundfarbe*/
+	  width: 95%;		/*Breite*/
+	  max-width: 800px;	/*maximale Breite*/
+	  margin: auto;		/*Zentrierte Ausrichtung des Elements*/
+	  margin-bottom: 1%;	/*rückt die Webseite 1 % von unten ein*/
+	  margin-top: 1%;		/*rückt die Webseite 1 % von oben ein*/
+	  border-bottom-left-radius: 20px;	/*Abgerundete Ecke unten links*/
+	  border-bottom-right-radius: 20px;	/*Abgerundete Ecke unten rechts*/
+	  box-shadow: 6px 6px 12px #ccf696;	/*Box-Schatten: horizontale Versatz
+														vertikale Versatz
+														Unschärfe
+														Farbe*/
+}
+
+	.kopf {
+      background-color: #ccf696; /*Hintergrundfarbe*/
+      color: white; 			 /*Schriftfarbe*/
+	  padding: 2%;				 /*Innenabstand von Inhalt zum Rand innerhalb eines DIV-Containers.*/
+	  text-align:center;		 /*Zentrierte Ausrichtung des Textes*/
+}
+
+ /*Mindesthöhe von 100px, Textausrichtung: Blocksatz*/
+	.inhalt {
+     	background-color: #fff;
+		padding: 9px;
+		border-left: #060 solid 1px;	/*Linker Rand: Farbe*/
+		border-top: #060 solid 1px;
+		border-bottom: #060 solid 1px;
+		min-height: 100px;		/*Mindesthöhe von 100px*/		
+		text-align: justify;	/*Textausrichtung: Blocksatz*/
+}
+
+/*Gestaltung der Hyperlink*/
+	a:link, a:visited {      	
+}
+
+
+	a:hover{		
+}
+ 
+/*Automatische Größenänderung des Bildes*/
+	img {		
+} 
+
+	.navigation li {
+	    display: inline-block;
+		list-style: none;
+}
+
+	.sprung {
+	    display: block;
+		text-align:center;
+		height: 1.5em;
+		color: #33500e;
+		overflow:hidden;
+}
+
+/*Höhenänderung auf 3em, Farbänderung und Transition*/
+	.sprung:hover {
+	    height: 3em;
+		color: #ccf696 ;
+		padding-top: 10px;
+		transition: 0.5s;
+}
+
+	.sprung a{
+		padding-right: 25px;
+}
+	 
+/*Screen-Layout für Browsergrößen mit einer Mindestgröße von 500px*/   
+@media screen and (min-width: 500px) {
+	  .sprung, .sprung:hover {
+		overflow: visible;
+		transition:none;
+		padding-top: 0;
+		text-align:left;
+		
+	}
+		 
+	  .navigation {
+		display: block;
+		font-size: 1em;
+       }
+	   
+	  .inhalt {     
+      }
+	  .navigation ul {
+	    padding-left: 6%;
+	  }
+	  .navigation li {
+	    display: list-item;
+		list-style-position:inside;
+		font-size: 18px;
+		padding: 5% 0 0 1%;
+		color: #33500e;
+	  }
+}
+
+/*Druck-Layout*/
+
+@media print {
+	#Gesamt {
+		padding: 10px;
+	}
+
+	img {	
+	}
+	
+	.sprung, .navigation, #rollover {	
+	}
+
+} 
+
+	#rollover {
+		clear: both;
+		padding: 15px;
+		float:right;
+}
+	
+
+	#rollover ul li {
+		list-style:none;	
+}
+
+	#rollover li a{
+		width:200px;
+		height:62px;
+		display: block;
+		background: url(Bilder/powered_by.jpg);
+}
+
+	#rollover  li a:hover{
+		background: url(Bilder/infoteam-Logo-gruen_hg.jpg);
+}	
+
+
+/* ====================================
+ Formular
+==================================   */
+
+
+	form {
+ 	 	width: 400px; /* Breite des Formulars */
+ 	 	padding: 10px;
+ 	 	margin: 0 auto;
+ 	 	border: 1px solid #8c8c8c;
+}
+
+
+	label { /* Beschriftung auf eigener Zeile */
+  		display: block;
+}
+
+input#Name_U,
+input#mail,
+select,
+textarea
+ 
+ { 
+  width: 300px;
+  margin-bottom: 1em;
+  border: 1px solid #8c8c8c;
+}
+
+</style>
+ 
+</head>
+<body>
+ <div id="Gesamt">
+   <div class="kopf">
+     	<!--Bild "Logo_der Fun&Food GmbH" einfügen-->
+    	<img src="Bilder/Logo_Vorgabe.jpg">
+   </div>
+
+   <div class="sprung">
+   		<h3>Menü</h3>
+    	<p />
+        <div class="navigation" >
+          <ul>
+           <!--Hyperlink erzeugen-->
+           <li><a href="#">Unsere Leitziele</a></li>
+           <li><a href="produkte.html">Produktlinien</a></li>
+           <li><a href="buchung.html">Kochkurse</a></li>
+          </ul>
+        </div>
+   </div>
+	 
+   <div class="inhalt"><h2>Unsere Leitziele</h2>
+   <p>
+     Vegane Ernährung entwickelt sich im Zuge von Klimawandel-Diskussionen und Fridays-for-Future-Demonstrationen
+      immer mehr vom Trend zum Mainstream. Wir sind mit rund 160 Produkten der weltweit einzige Vollsortimenter für vegane Lebensmittel
+     Wir haben uns zum Ziel gesetzt, dir in unserem veganen Onlineshop eine breite Auswahl an veganen Lebensmitteln anzubieten. Wir haben uns auf drei Bereiche spezialisiert: Vegane Lebensmittel, Vegane Kosmetik und Vegane Tiernahrung,
+     Unser Sortiment umschließt sowohl Grundzutaten wie beispielsweise Seitan, Tofu- sowie Sojaprodukte und Tempeh, als auch Fertiggerichte, die du nur schnell warm machen brauchst. In jedem Fall legen wir Wert darauf, dass unsere veganen Lebensmittel von Produzenten stammen,
+     die ethische und ökologische Richtlinien einhalten! Dafür stehen wir mit unserem <strong>Zertifikatslogo!</strong>
+   </p>
+   </div>
+
+
+<!--Rollover erzeugen-->
+  <div id="rollover">
+     	 		<ul>
+					<li ><a href="#">&nbsp;</a></li>
+            	</ul>
+          	</div>
+
+ </div>
+
+
+</body>
+</html>
